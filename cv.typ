@@ -1,7 +1,7 @@
 // ATS-first single-column resume.
 // Build: typst compile cv.typ
 // ATS affordances are deliberate - keep them when editing:
-//   * standard section headings (SUMMARY / WORK EXPERIENCE / RESEARCH EXPERIENCE / TECHNICAL SKILLS / EDUCATION)
+//   * standard section headings (SUMMARY / PROFESSIONAL EXPERIENCE / RESEARCH EXPERIENCE / TECHNICAL SKILLS / EDUCATION)
 //   * labeled contact fields, plain-text URLs, smart quotes disabled (ASCII apostrophes/hyphens)
 //   * full month names in dates, reverse-chronological roles
 //   * no letter-spacing (tracking) on name/headings, no ligatures, no hyphenation
@@ -34,7 +34,7 @@
 )
 #set text(
   font: ("Palatino", "Libertinus Serif"),
-  size: 11pt,
+  size: 10.6pt,
   fill: rgb("#1a1a1a"),
   ligatures: false,
   hyphenate: false,
@@ -94,15 +94,15 @@
 
 #section("SUMMARY")
 #par[
-  Infrastructure engineer with 9+ years of experience in Linux administration and cloud infrastructure for software development teams. I turn infrastructure operations into code through reusable AWS CDK constructs in TypeScript and automation services in Go. At Amazon, I've led multi-region service expansions and safety-gated deployments supporting S3 Glacier.
+  Systems Development Engineer at AWS with over a decade of experience turning slow, risky infrastructure work into safe, repeatable automation. For S3 Glacier, that meant cutting region launches from about 60 days to under 30 as the hardware footprint grew to 11 AWS Regions. I also designed and built the system that rolled out firmware updates to about 10,000 drives with zero high-severity incidents. Before AWS, I ran Linux and cloud infrastructure for SaaS and enterprise teams, including a platform serving 15 million requests a day. I do my best work where internal systems meet, turning real-world business processes into software workflows so teams can move faster together.
 ]
 
-#section("WORK EXPERIENCE")
+#section("PROFESSIONAL EXPERIENCE")
 #role(
-  [Amazon], [System Development Engineer II], [September 2022 - Present], [Crystal City, VA],
+  [AWS - S3], [Systems Development Engineer], [September 2022 - Present], [Crystal City, VA],
   (
-    [Implemented a firmware-update orchestration service across 8 AWS Regions with staged, safety-gated updates for ~5,000 drives on 1,250 custom hardware units; resulted in zero Sev2 incidents.],
-    [Led expansion of 8 services into 5 new AWS Regions; fixed opt-in-region gaps in cross-account S3 policies and IAM/STS endpoints.],
+    [Implemented a firmware-update orchestration service across 11 AWS Regions with staged, safety-gated updates for about 10,000 drives on about 2,500 custom hardware units; resulted in zero Sev2 incidents.],
+    [Led expansion of 8 services into 6 new AWS Regions; fixed opt-in-region gaps in cross-account S3 policies and IAM/STS endpoints.],
     [Built 6 Go clients for internally vended workflow orchestration, host lifecycle management, and cross-account request-and-response workflows.],
     [Delivered CDK constructs: standardized CloudWatch logging, an AppConfig emergency stop, least-privilege IAM roles, S3 audited access logging, and Step Functions workflows handling custom retry and error logic.],
     [Built shared libraries consumed by up to 9 services supporting S3 Glacier's object storage platform at exabyte scale.],
@@ -111,7 +111,7 @@
   ),
 )
 #role(
-  [Transcat], [Systems Administrator], [August 2020 - August 2022], [Rochester, NY, USA],
+  [Transcat], [Cloud Systems Engineer], [August 2020 - August 2022], [Rochester, NY, USA],
   (
     [Built a Jenkins CI/CD pipeline for a microservices application on AWS ECS.],
     [Migrated infrastructure to CloudFormation, and implemented a SOX-compliant Linux backup and patching solution using AWS Backup and Systems Manager.],
@@ -119,7 +119,7 @@
   ),
 )
 #role(
-  [DealerOn], [Linux Administrator], [September 2016 - July 2018], [Derwood, MD, USA],
+  [DealerOn], [Linux Systems Engineer], [September 2016 - July 2018], [Derwood, MD, USA],
   (
     [Maintained 99.99% uptime for a SaaS environment of more than 150 VMware virtual machines while meeting SLA response-time requirements for more than 15 million daily requests through Fastly, NGINX, and Windows IIS.],
     [Deployed and administered multi-node Redis, Elasticsearch, and Riak systems.],
@@ -127,7 +127,7 @@
   ),
 )
 #role(
-  [DigBang], [Junior Systems Administrator], [February 2013 - January 2016], [Buenos Aires, Argentina],
+  [DigBang], [Systems Administrator], [February 2013 - January 2016], [Buenos Aires, Argentina],
   (
     [Deployed Atlassian JIRA and related products for the Agile development lifecycle. Integrated Laravel and the Deployer deployment tool.],
     [Administered Linux development and QA servers.],
@@ -155,6 +155,9 @@
 #inline-item([Observability & Data Platforms], [Datadog, Grafana, Graylog, Zabbix, PRTG, Opserver, Redis, Elasticsearch, Riak])
 
 #section("EDUCATION", top_gap: 6pt)
-#text(weight: "bold", size: 9.7pt)[Gallaudet University, Washington, DC]
-#linebreak()
-#text(weight: "medium", size: 9.7pt)[Bachelor of Science in Information Technology (B.S.) #h(1fr)May 2020]
+#block(above: 0pt, below: 4pt)[
+  #text(weight: "bold", size: 9.7pt)[Rochester Institute of Technology]
+  #text(weight: "medium", size: 9.7pt)[| M.S. in Computer Science (\~50% completed) #h(1fr)#box[Fall 2021 - Ongoing]]
+]
+#text(weight: "bold", size: 9.7pt)[Gallaudet University]
+#text(weight: "medium", size: 9.7pt)[| B.S. in Information Technology #h(1fr)Fall 2018 - May 2020]

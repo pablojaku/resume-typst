@@ -22,7 +22,7 @@ back to its bundled Libertinus Serif.
 The layout is single-column and plain on purpose so applicant tracking systems
 parse it cleanly:
 
-- Standard section headings: Summary, Work Experience, Research Experience,
+- Standard section headings: Summary, Professional Experience, Research Experience,
   Technical Skills, Education
 - Labeled contact fields and plain-text URLs
 - ASCII text layer: no smart quotes, ligatures, or hyphenation. The only
